@@ -112,6 +112,10 @@ async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
                         let correct_option = game.get_content().get_correct_choice().content.clone();
                         inform(ctx, msg, false, correct_option).await?;
                     }
+                },
+                "giveup" => {
+                    mci.defer(ctx.http()).await?;
+                    return result(ctx, msg, &game).await;
                 }
                 _ => {}
             }
@@ -150,6 +154,13 @@ async fn prompt(
                     });
                 }
                 a
+            })
+            .create_action_row(|a|{
+                a.create_button(|b|{
+                    b.custom_id("giveup")
+                    .style(serenity::ButtonStyle::Danger)
+                    .label("End the game")
+                })
             })
         })
     })
