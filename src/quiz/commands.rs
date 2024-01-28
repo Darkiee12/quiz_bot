@@ -59,16 +59,18 @@ pub async fn quiz(ctx: Context<'_>) -> Result<(), Error> {
 }
 
 async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
+    let questions = unpack_quiz()?;
     msg.edit(*ctx, |e| {
         e.embed(|e| {
-            e.title("Quiz").description(
+            e.title("Quiz").description(format!(
                 r#"
+                There are a total of {}
                 Every question has 4 or 5 choices.
                 Please select the most suitable one
                 For each correct question, you will get 1 point
                 If you don't know the answer, please choose a random option to continue to the next question
                 Press the button below to start the quiz
-                "#
+                "#, questions.len())
             )
         })
         .components(|c| {
@@ -82,8 +84,10 @@ async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
         })
     })
     .await?;
-    let questions = unpack_quiz()?;
-    let mut game = Game::new(questions, Mode::SinglePlayer(Player::new(ctx.author().clone())));
+    let mut game = Game::new(
+        questions,
+        Mode::SinglePlayer(Player::new(ctx.author().clone())),
+    );
     let mut resp = msg
         .clone()
         .into_message()
@@ -95,24 +99,33 @@ async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
     if let Some(mci) = &resp.next().await {
         if mci.data.custom_id.as_str() == "start" {
             mci.defer(&ctx.http()).await?;
-        } 
+        }
     }
-    loop{
-        prompt(ctx, msg, game.get_content(), format!("Your score is {}",game.get_player_score(None)),game.index as i32).await?;
+    loop {
+        prompt(
+            ctx,
+            msg,
+            game.get_content(),
+            format!("Your score is {}", game.get_player_score(None)),
+            game.index as i32,
+        )
+        .await?;
         if let Some(mci) = &resp.next().await {
             match mci.data.custom_id.as_str() {
                 "0" | "1" | "2" | "3" | "4" => {
                     mci.defer(ctx.http()).await?;
                     info!("{} selected an option", mci.user.name);
-                    let option = &game.get_content().choices[mci.data.custom_id.parse::<usize>().unwrap_or(0)];
-                    if option.value{
+                    let option = &game.get_content().choices
+                        [mci.data.custom_id.parse::<usize>().unwrap_or(0)];
+                    if option.value {
                         inform(ctx, msg, true, option.content.clone()).await?;
                         game.update_score(None);
                     } else {
-                        let correct_option = game.get_content().get_correct_choice().content.clone();
+                        let correct_option =
+                            game.get_content().get_correct_choice().content.clone();
                         inform(ctx, msg, false, correct_option).await?;
                     }
-                },
+                }
                 "giveup" => {
                     mci.defer(ctx.http()).await?;
                     return result(ctx, msg, &game).await;
@@ -120,10 +133,10 @@ async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
                 _ => {}
             }
             sleep(Duration::from_secs(INFORM)).await;
-            if !game.next(){
+            if !game.next() {
                 break;
             }
-        }       
+        }
     }
 
     result(ctx, msg, &game).await
@@ -139,7 +152,7 @@ async fn prompt(
     let choices = question.get_options();
     msg.edit(*ctx, |e| {
         e.embed(|e| {
-            e.title(format!("Question {}", index+1))
+            e.title(format!("Question {}", index + 1))
                 .description(format!("**{}**", question.question))
                 .fields(choices.clone())
                 .footer(|f| f.text(info))
@@ -155,11 +168,11 @@ async fn prompt(
                 }
                 a
             })
-            .create_action_row(|a|{
-                a.create_button(|b|{
+            .create_action_row(|a| {
+                a.create_button(|b| {
                     b.custom_id("giveup")
-                    .style(serenity::ButtonStyle::Danger)
-                    .label("End the game")
+                        .style(serenity::ButtonStyle::Danger)
+                        .label("End the game")
                 })
             })
         })
@@ -167,23 +180,30 @@ async fn prompt(
     .await?;
     Ok(())
 }
-async fn inform(ctx: &Context<'_>, msg: &ReplyHandle<'_>, correct: bool, correct_option: String) -> Result<(), Error> {
-    if correct{
-        msg.edit(*ctx, |e|{
-            e.embed(|e|{
+async fn inform(
+    ctx: &Context<'_>,
+    msg: &ReplyHandle<'_>,
+    correct: bool,
+    correct_option: String,
+) -> Result<(), Error> {
+    if correct {
+        msg.edit(*ctx, |e| {
+            e.embed(|e| {
                 e.title("Correct! You gain 1 point!")
-                .description(format!("Correct answer: {correct_option}"))
+                    .description(format!("Correct answer: {correct_option}"))
             })
-            .components(|c|c)
-        }).await?;
-    } else{
-        msg.edit(*ctx, |e|{
-            e.embed(|e|{
+            .components(|c| c)
+        })
+        .await?;
+    } else {
+        msg.edit(*ctx, |e| {
+            e.embed(|e| {
                 e.title("Incorrect!")
-                .description(format!("Correct answer: {correct_option}"))
+                    .description(format!("Correct answer: {correct_option}"))
             })
-            .components(|c|c)
-        }).await?;
+            .components(|c| c)
+        })
+        .await?;
     }
     Ok(())
 }

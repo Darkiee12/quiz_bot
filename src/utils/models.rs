@@ -1,7 +1,6 @@
 use poise::serenity_prelude as serenity;
 use serde::Deserialize;
 
-
 #[derive(Deserialize, Debug)]
 pub struct Question {
     pub question: String,
@@ -15,12 +14,12 @@ pub struct Choice {
     pub value: bool,
 }
 
-pub struct Player{
+pub struct Player {
     pub name: serenity::User,
     pub score: i32,
     pub answered: bool,
 }
-pub struct Game{
+pub struct Game {
     pub content: Vec<Question>,
     pub index: usize,
     pub mode: Mode,
@@ -40,7 +39,7 @@ impl Game {
         }
     }
 
-    pub fn add_player(&mut self, player: &serenity::User ) {
+    pub fn add_player(&mut self, player: &serenity::User) {
         match &mut self.mode {
             Mode::SinglePlayer(p) => {
                 *p = Player::new(player.clone());
@@ -61,9 +60,7 @@ impl Game {
                     None
                 }
             }
-            Mode::MultiplePlayers(players) => {
-                players.iter().find(|p| &p.name == player)
-            }
+            Mode::MultiplePlayers(players) => players.iter().find(|p| &p.name == player),
         }
     }
 
@@ -80,25 +77,26 @@ impl Game {
 
     pub fn get_final_result(&self) -> Vec<(String, &str, bool)> {
         match &self.mode {
-            Mode::SinglePlayer(player) => vec![(format!("{}: {}", player.name, player.score), "", false)],
+            Mode::SinglePlayer(player) => {
+                vec![(format!("{}: {}", player.name, player.score), "", false)]
+            }
             Mode::MultiplePlayers(players) => players
                 .iter()
                 .map(|p| (format!("{}: {}", p.name, p.score), "", false))
                 .collect(),
         }
     }
-    
+
     pub fn get_player_score(&self, player: Option<&serenity::User>) -> i32 {
         match &self.mode {
-            Mode::SinglePlayer(p) => {
-                p.score
-            }
-            Mode::MultiplePlayers(players) => {
-                players.iter().find(|p| &p.name == player.unwrap()).map_or(0, |p| p.score)
-            }
+            Mode::SinglePlayer(p) => p.score,
+            Mode::MultiplePlayers(players) => players
+                .iter()
+                .find(|p| &p.name == player.unwrap())
+                .map_or(0, |p| p.score),
         }
     }
-    
+
     pub fn update_score(&mut self, player: Option<&serenity::User>) {
         match &mut self.mode {
             Mode::SinglePlayer(p) => {
@@ -125,7 +123,7 @@ impl Question {
             .enumerate()
             .map(|(index, c)| {
                 let letter = (b'A' + index as u8) as char;
-                (format!("{} {}", letter, c.content.clone()), "", false)
+                (format!("{}. {}", letter, c.content.clone()), "", false)
             })
             .collect()
     }
@@ -133,7 +131,6 @@ impl Question {
         // Assuming there is at least one correct choice
         self.choices.iter().find(|&choice| choice.value).unwrap()
     }
-    
 }
 
 impl Player {
