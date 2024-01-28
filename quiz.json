@@ -1,0 +1,68 @@
+[
+  {
+    "question": "What is the primary function of the data plane in the network layer?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Forwarding packets between network devices",
+        "value": true
+      },
+      {
+        "content": "Establishing connections between hosts",
+        "value": false
+      },
+      {
+        "content": "Managing network resources",
+        "value": false
+      },
+      {
+        "content": "Implementing network security protocols",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What is the advantage of using SDN in network layer management?",
+    "kind": "choices", 
+    "choices": [
+      {
+        "content": "Limited scalability and flexibility",
+        "value": false
+      },
+      {
+        "content": "Higher latency and slower data transmission",
+        "value": false
+      },
+      {
+        "content": "Increased physical network devices required.",
+        "value": false
+      },
+      {
+        "content": "Simplified network management and configuration",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "Which of the following devices operates at the data plane in the network layer?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Router", 
+        "value": true
+      },
+      {
+        "content": "Switch",
+        "value": false
+      },
+      {
+        "content": "Hub",
+        "value": false
+      },
+      {
+        "content": "Firewall",
+        "value": false
+      }
+    ]
+  }
+]
