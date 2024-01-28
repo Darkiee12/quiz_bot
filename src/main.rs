@@ -13,7 +13,7 @@ pub type Context<'a> = poise::Context<'a, Data, Error>;
 
 #[tokio::main]
 async fn main() {
-    dotenv::dotenv().expect("Unable to load the .env file. Check if it has been created.");
+    // dotenv::dotenv().expect("Unable to load the .env file. Check if it has been created.");
 
     if let Err(e) = create_subscriber() {
         // Change to a panic!() if you really need logging to work

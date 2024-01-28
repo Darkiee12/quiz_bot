@@ -1,12 +1,14 @@
 {
   // These tasks will run in order when initializing your CodeSandbox project.
-  "setupTasks": [
-    {
-    }
-  ],
+  "setupTasks": [],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
+    "cargo rucn --release": {
+      "name": "cargo rucn --release",
+      "command": "cargo rucn --release",
+      "runAtStart": true
+    },
     "cargo run --release": {
       "name": "cargo run --release",
       "command": "cargo run --release",

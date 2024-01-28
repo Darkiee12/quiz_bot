@@ -23,7 +23,7 @@
   },
   {
     "question": "What is the advantage of using SDN in network layer management?",
-    "kind": "choices", 
+    "kind": "choices",
     "choices": [
       {
         "content": "Limited scalability and flexibility",
@@ -48,7 +48,7 @@
     "kind": "choices",
     "choices": [
       {
-        "content": "Router", 
+        "content": "Router",
         "value": true
       },
       {
@@ -65,7 +65,7 @@
       }
     ]
   },
-  
+
   {
     "question": "What is the drawback of the link state routing algorithm?",
     "kind": "choices",
@@ -143,7 +143,7 @@
       {
         "content": "Border Gateway Protocol (BGP)",
         "value": false
-      }, 
+      },
       {
         "content": "Routing Informatin Protocol (RIP)",
         "value": false
@@ -191,7 +191,7 @@
       {
         "content": "ICMP (Internet Control Message Protocol)",
         "value": false
-      },  
+      },
       {
         "content": "ARP (Address Resolution Protocol)",
         "value": false
@@ -201,11 +201,11 @@
   {
     "question": "What is the purpose of interfaces in a router?",
     "kind": "choices",
-    "choices":[
+    "choices": [
       {
         "content": "To provide physical connectivity to network devices",
         "value": true
-      }, 
+      },
       {
         "content": "To perform packet forwarding and routing decisions",
         "value": false
@@ -214,7 +214,7 @@
         "content": "To store configuration files and routing tables",
         "value": false
       },
-      {  
+      {
         "content": "To manage the router's operating system and control plane processes",
         "value": false
       }
@@ -223,7 +223,7 @@
   {
     "question": "What is the main concept behind SDN?",
     "kind": "choices",
-    "choices":[
+    "choices": [
       {
         "content": "Centralized control and programmability of network infrastructure",
         "value": true
@@ -235,9 +235,9 @@
       {
         "content": "Hardware-based networking without sotiware abstraction",
         "value": false
-      }, 
+      },
       {
-        "content": "Decentralized control and programmability of network infrastructure",  
+        "content": "Decentralized control and programmability of network infrastructure",
         "value": false
       }
     ]
@@ -245,7 +245,7 @@
   {
     "question": "What is tunneling in the context of IPv6 transition?",
     "kind": "choices",
-    "choices":[
+    "choices": [
       {
         "content": "Translating IPv6 addresses to IPv4 addresses.",
         "value": false
@@ -261,7 +261,7 @@
       {
         "content": "Allocating IPv6 addresses to IPv4-only devices.",
         "value": false
-      } 
+      }
     ]
   },
   {
@@ -270,14 +270,14 @@
     "choices": [
       {
         "content": "IP (Internet Protocol)",
-        "value": true  
+        "value": true
       },
       {
         "content": "TCP (Transmission Control Protocol)",
         "value": false
       },
       {
-        "content": "UDP (User Datagram Protocol)", 
+        "content": "UDP (User Datagram Protocol)",
         "value": false
       },
       {
@@ -288,7 +288,7 @@
   },
   {
     "question": "Which component of a router is responsible for processing and forwarding data packets?",
-    "kind": "choices", 
+    "kind": "choices",
     "choices": [
       {
         "content": "Routing Processor",
@@ -307,7 +307,7 @@
         "value": false
       }
     ]
-  }, 
+  },
   {
     "question": "What is the structure of an IPv4 address?",
     "kind": "choices",
@@ -325,7 +325,7 @@
         "value": false
       },
       {
-        "content": "Class and network ID.", 
+        "content": "Class and network ID.",
         "value": false
       }
     ]
@@ -335,7 +335,7 @@
     "kind": "choices",
     "choices": [
       {
-        "content": "By broadcasting the information to all routers in the network",  
+        "content": "By broadcasting the information to all routers in the network",
         "value": false
       },
       {
@@ -345,7 +345,7 @@
       {
         "content": "By sending the information directly to neighboring routers",
         "value": false
-      }, 
+      },
       {
         "content": "By flooding the information to all routers in the network.",
         "value": true
@@ -359,9 +359,9 @@
       {
         "content": "Routing table entries",
         "value": false
-      }, 
+      },
       {
-        "content": "Hop count to destination networks.",  
+        "content": "Hop count to destination networks.",
         "value": false
       },
       {
@@ -372,22 +372,22 @@
         "content": "Topology information of the entire network",
         "value": true
       }
-    ] 
+    ]
   },
   {
     "question": "How does a router share its routing table information in the distance vector routing algorithm?",
-    "kind": "choices", 
+    "kind": "choices",
     "choices": [
       {
         "content": "By broadcasting the information to all routers in the network",
-        "value": false  
+        "value": false
       },
-      {  
+      {
         "content": "By multicasting the information to specific routers in the network",
         "value": false
       },
       {
-        "content": "By sending the information directly to neighboring routers", 
+        "content": "By sending the information directly to neighboring routers",
         "value": true
       },
       {
@@ -401,12 +401,12 @@
     "kind": "choices",
     "choices": [
       {
-        "content": "It determines the optimal path for packet delivery.",  
+        "content": "It determines the optimal path for packet delivery.",
         "value": false
       },
       {
         "content": "It manages network resources and bandwidth allocation.",
-        "value": false 
+        "value": false
       },
       {
         "content": "It enforces security policies and access control.",
@@ -417,7 +417,7 @@
         "value": false
       }
     ]
-  }, 
+  },
   {
     "question": "What is the disadvantage of using NAT?",
     "kind": "choices",
@@ -429,7 +429,7 @@
       {
         "content": "It weakens network security.",
         "value": false
-      }, 
+      },
       {
         "content": "It requires additional network infrastructure.",
         "value": false
