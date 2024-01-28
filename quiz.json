@@ -439,5 +439,445 @@
         "value": false
       }
     ]
+  },
+  {
+    "question": "What is the advantage of using the link state routing algorithm over the distance vector routing algorithm?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "It has lower memory and processing requirements.",
+        "value": false
+      },
+      {
+        "content": "It is easier to implement and configure.",
+        "value": false
+      },
+      {
+        "content": "It provides faster convergence in large networks.",
+        "value": true
+      },
+      {
+        "content": "It is more suitable for stable network topologies.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What is the purpose of the subnet mask in an IPv4 address?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "To identify the network portion of the address.",
+        "value": true
+      },
+      {
+        "content": "To identify the host portion of the address.",
+        "value": false
+      },
+      {
+        "content": "To determine the class of the address.",
+        "value": false
+      },
+      {
+        "content": "To provide security for the network.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which protocol is commonly used in SDN to communicate between the control plane and data plane?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Border Gateway Protocol (BGP)",
+        "value": false
+      },
+      {
+        "content": "OpenFlow.",
+        "value": true
+      },
+      {
+        "content": "Transmission Control Protocol (TCP)",
+        "value": false
+      },
+      {
+        "content": "Internet Control Message Protocol (ICMP)",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which classful address range is reserved for multicast addresses?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Class A",
+        "value": false
+      },
+      {
+        "content": "Class B",
+        "value": false
+      },
+      {
+        "content": "Class C",
+        "value": false
+      },
+      {
+        "content": "Class D.",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "What is the advantage of using the distance vector routing algorithm over the link state routing algorithm?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "It converges more quickly in large networks.",
+        "value": false
+      },
+      {
+        "content": "It requires less memory and processing resources.",
+        "value": true
+      },
+      {
+        "content": "It provides more accurate network topology information.",
+        "value": false
+      },
+      {
+        "content": "It supports more advanced routing features.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which field in the IPv4 header is used for fragmentation and reassembly of packets?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Source IP address",
+        "value": false
+      },
+      {
+        "content": "Destination IP address",
+        "value": false
+      },
+      {
+        "content": "Datagram length",
+        "value": false
+      },
+      {
+        "content": "Identifier.",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "How does a router calculate the shortest path to a destination in the link state routing algorithm?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "By comparing the hop count to the destination network",
+        "value": false
+      },
+      {
+        "content": "By using the Bellman-Ford algorithm",
+        "value": false
+      },
+      {
+        "content": "By running Dijkstra's algorithm on the link state database.",
+        "value": true
+      },
+      {
+        "content": "By consulting the routing table entries",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which IPv4 address range is reserved for private networks?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "10.0.0.0 - 10.255.255.255",
+        "value": false
+      },
+      {
+        "content": "172.16.0.0 - 172.31.255.255",
+        "value": false
+      },
+      {
+        "content": "192.168.0.0 - 192.168.255.255",
+        "value": false
+      },
+      {
+        "content": "All of the above.",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is a limitation of SDN in the network layer?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Reduced network performance and increased latency",
+        "value": false
+      },
+      {
+        "content": "Inability to handle large-scale networks.",
+        "value": false
+      },
+      {
+        "content": "Limited support for network virtualization",
+        "value": false
+      },
+      {
+        "content": "Dependency on a centralized controller can be a single point of failure.",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "Which routing algorithm is based on the concept of link-state information?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Distance Vector Routing Algorithm",
+        "value": false
+      },
+      {
+        "content": "Link State Routing Algorithm",
+        "value": true
+      },
+      {
+        "content": "Border Gateway Protocol (BGP)",
+        "value": false
+      },
+      {
+        "content": "Open Shortest Path First (OSPF)",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "Which statement about NAT is true?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "NAT is not compatible with firewalls.",
+        "value": false
+      },
+      {
+        "content": "NAT can translate IP addresses between different network protocols.",
+        "value": false
+      },
+      {
+        "content": "NAT can only be used in small networks, not large-scale deployments.",
+        "value": false
+      },
+      {
+        "content": "NAT can only translate IPv4 addresses, not IPv6 addresses.",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is an example of an SDN controller?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "OpenVPN",
+        "value": false
+      },
+      {
+        "content": "Wireshark",
+        "value": false
+      },
+      {
+        "content": "OpenDaylight.",
+        "value": true
+      },
+      {
+        "content": "Cisco IOS",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What is the role of the OpenFlow protocol in SDN?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "It provides encryption and security for network traffic.",
+        "value": false
+      },
+      {
+        "content": "It enables communication between the SDN controller and network devices.",
+        "value": true
+      },
+      {
+        "content": "It establishes connections between hosts in different networks.",
+        "value": false
+      },
+      {
+        "content": "It handles the physical connectivity between network devices",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "How is an IPv4 address written?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "In binary format",
+        "value": false
+      },
+      {
+        "content": "In hexadecimal format",
+        "value": false
+      },
+      {
+        "content": "In octal format",
+        "value": false
+      },
+      {
+        "content": "In decimal format with dot-decimal notation",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "How does SDN improve network agility in the network layer?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "It increases network complexity and management overhead.",
+        "value": false
+      },
+      {
+        "content": "It allows for rapid deployment and reconfiguration of network services.",
+        "value": true
+      },
+      {
+        "content": "It limits the flexibility of network infrastructure.",
+        "value": false
+      },
+      {
+        "content": "It requires manual configuration of network devices.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What is the control plane in computer networking?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "The part of the network responsible for forwarding data packets",
+        "value": false
+      },
+      {
+        "content": "The part of the network responsible for controlling and managing network devices",
+        "value": true
+      },
+      {
+        "content": "The part of the network responsible for encrypting network traffic",
+        "value": false
+      },
+      {
+        "content": "The part of the network responsible for routing network traffic",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which statement about ICMP is correct?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "ICMP messages are always sent in response to specific events.",
+        "value": true
+      },
+      {
+        "content": "ICMP messages are transported over TCP.",
+        "value": false
+      },
+      {
+        "content": "ICMP provides reliable data transfer.",
+        "value": false
+      },
+      {
+        "content": "ICMP messages are always sent in response to specific events.",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "Which control plane function involves exchanging routing information between network devices?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Network monitoring",
+        "value": false
+      },
+      {
+        "content": "Network configuration",
+        "value": false
+      },
+      {
+        "content": "Routing table updates",
+        "value": true
+      },
+      {
+        "content": "Quality of Service (QoS) management",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is an example of an addressing scheme used in the network layer?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "IPv4 (Internet Protocol version 4)",
+        "value": true
+      },
+      {
+        "content": "HTTP (Hypertext Transfer Protocol)",
+        "value": false
+      },
+      {
+        "content": "DNS (Domain Name System)",
+        "value": false
+      },
+      {
+        "content": "FTP (File Transfer Protocol)",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "In a network layer, what is the purpose of Quality of Service (QoS) mechanisms?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "To prioritize certain types of network traffic",
+        "value": true
+      },
+      {
+        "content": "To encrypt data packets for secure transmission",
+        "value": false
+      },
+      {
+        "content": "To establish connections between hosts",
+        "value": false
+      },
+      {
+        "content": "To prevent unauthorized access to the network",
+        "value": false
+      }
+    ]
   }
 ]
