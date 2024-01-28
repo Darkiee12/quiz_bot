@@ -64,5 +64,380 @@
         "value": false
       }
     ]
+  },
+  
+  {
+    "question": "What is the drawback of the link state routing algorithm?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "It requires frequent updates due to its dynamic nature.",
+        "value": false
+      },
+      {
+        "content": "It is susceptible to routing loops and count-to-infinity issues.",
+        "value": false
+      },
+      {
+        "content": "It is less scalable for large networks.",
+        "value": true
+      },
+      {
+        "content": "It does not support route summarization.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which protocol is commonly used for control plane communication between network devices?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Internet Protocol (IP)",
+        "value": false
+      },
+      {
+        "content": "Border Gateway Protocol (BGP)",
+        "value": true
+      },
+      {
+        "content": "Simple Network Management Protocol (SNMP)",
+        "value": false
+      },
+      {
+        "content": "Transmission Control Protocol (TCP)",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is a benefit of SDN in terms of network scalability?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "It limits the number of devices that can be connected to the network.",
+        "value": false
+      },
+      {
+        "content": "It requires manual configuration of network devices.",
+        "value": false
+      },
+      {
+        "content": "It allows for easy addition and removal of network devices.",
+        "value": true
+      },
+      {
+        "content": "It increases network complexity",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is NOT an example of a control plane protocol used for routing in the Internet?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "OSPF (Open Shortest Path First)",
+        "value": false
+      },
+      {
+        "content": "Border Gateway Protocol (BGP)",
+        "value": false
+      }, 
+      {
+        "content": "Routing Informatin Protocol (RIP)",
+        "value": false
+      },
+      {
+        "content": "Internet Control Message Protocol",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "What is the drawback of the distance vector routing algorithm?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "It requires frequent updates due to its dynamic nature.",
+        "value": false
+      },
+      {
+        "content": "It is susceptible to routing loops and count-to-infinity issues.",
+        "value": true
+      },
+      {
+        "content": "It is less scalable for large networks.",
+        "value": false
+      },
+      {
+        "content": "It does not support route summarizatoon.",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which protocol operates at the network layer to deliver packets across different networks?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "IP (Internet Protocol)",
+        "value": true
+      },
+      {
+        "content": "TCP (Transmission Control Protocol)",
+        "value": false
+      },
+      {
+        "content": "ICMP (Internet Control Message Protocol)",
+        "value": false
+      },  
+      {
+        "content": "ARP (Address Resolution Protocol)",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What is the purpose of interfaces in a router?",
+    "kind": "choices",
+    "choices":[
+      {
+        "content": "To provide physical connectivity to network devices",
+        "value": true
+      }, 
+      {
+        "content": "To perform packet forwarding and routing decisions",
+        "value": false
+      },
+      {
+        "content": "To store configuration files and routing tables",
+        "value": false
+      },
+      {  
+        "content": "To manage the router's operating system and control plane processes",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What is the main concept behind SDN?",
+    "kind": "choices",
+    "choices":[
+      {
+        "content": "Centralized control and programmability of network infrastructure",
+        "value": true
+      },
+      {
+        "content": "Decentralized control and manual configuration of network devices",
+        "value": false
+      },
+      {
+        "content": "Hardware-based networking without sotiware abstraction",
+        "value": false
+      }, 
+      {
+        "content": "Decentralized control and programmability of network infrastructure",  
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What is tunneling in the context of IPv6 transition?",
+    "kind": "choices",
+    "choices":[
+      {
+        "content": "Translating IPv6 addresses to IPv4 addresses.",
+        "value": false
+      },
+      {
+        "content": "Encapsulating IPv6 packets within IPv4 packets for transport across IPv4 networks",
+        "value": true
+      },
+      {
+        "content": "Assigning temporary IPv6 addresses to devices during the transition period.",
+        "value": false
+      },
+      {
+        "content": "Allocating IPv6 addresses to IPv4-only devices.",
+        "value": false
+      } 
+    ]
+  },
+  {
+    "question": "ICMP is closely associated with which protocol?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "IP (Internet Protocol)",
+        "value": true  
+      },
+      {
+        "content": "TCP (Transmission Control Protocol)",
+        "value": false
+      },
+      {
+        "content": "UDP (User Datagram Protocol)", 
+        "value": false
+      },
+      {
+        "content": "HTTP (Hypertext Transfer Protocol)",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which component of a router is responsible for processing and forwarding data packets?",
+    "kind": "choices", 
+    "choices": [
+      {
+        "content": "Routing Processor",
+        "value": false
+      },
+      {
+        "content": "Routing Logic",
+        "value": false
+      },
+      {
+        "content": "Switching Fabric",
+        "value": true
+      },
+      {
+        "content": "Forwarding Processor",
+        "value": false
+      }
+    ]
+  }, 
+  {
+    "question": "What is the structure of an IPv4 address?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Network portion and host portion",
+        "value": true
+      },
+      {
+        "content": "Prefix and suffix",
+        "value": false
+      },
+      {
+        "content": "Subnet mask and subnet ID",
+        "value": false
+      },
+      {
+        "content": "Class and network ID.", 
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "How does a router share its link state information in the link state routing algorithm?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "By broadcasting the information to all routers in the network",  
+        "value": false
+      },
+      {
+        "content": "By multicasting the information to specific routers in the network",
+        "value": false
+      },
+      {
+        "content": "By sending the information directly to neighboring routers",
+        "value": false
+      }, 
+      {
+        "content": "By flooding the information to all routers in the network.",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "What information does a router maintain in the link state database in the link state routing algorithm?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Routing table entries",
+        "value": false
+      }, 
+      {
+        "content": "Hop count to destination networks.",  
+        "value": false
+      },
+      {
+        "content": "Neighbor router information",
+        "value": false
+      },
+      {
+        "content": "Topology information of the entire network",
+        "value": true
+      }
+    ] 
+  },
+  {
+    "question": "How does a router share its routing table information in the distance vector routing algorithm?",
+    "kind": "choices", 
+    "choices": [
+      {
+        "content": "By broadcasting the information to all routers in the network",
+        "value": false  
+      },
+      {  
+        "content": "By multicasting the information to specific routers in the network",
+        "value": false
+      },
+      {
+        "content": "By sending the information directly to neighboring routers", 
+        "value": true
+      },
+      {
+        "content": "By flooding the information to all routers in the network",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is a characteristic of the data plane in the network layer?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "It determines the optimal path for packet delivery.",  
+        "value": false
+      },
+      {
+        "content": "It manages network resources and bandwidth allocation.",
+        "value": false 
+      },
+      {
+        "content": "It enforces security policies and access control.",
+        "value": true
+      },
+      {
+        "content": "It focuses on the efficient forwarding of packets.",
+        "value": false
+      }
+    ]
+  }, 
+  {
+    "question": "What is the disadvantage of using NAT?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "It may increase network latency.",
+        "value": true
+      },
+      {
+        "content": "It weakens network security.",
+        "value": false
+      }, 
+      {
+        "content": "It requires additional network infrastructure.",
+        "value": false
+      },
+      {
+        "content": "All of above.",
+        "value": false
+      }
+    ]
   }
 ]
