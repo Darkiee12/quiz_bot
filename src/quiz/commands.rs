@@ -59,7 +59,15 @@ pub async fn quiz(ctx: Context<'_>) -> Result<(), Error> {
 }
 
 async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
-    let questions = unpack_quiz()?;
+    let questions = match unpack_quiz(){
+        Ok(questions) => questions,
+        Err(e) => {
+            info!("Error: {}", e);
+            msg.edit(*ctx,|s|
+                s.content("Error: Failed to unpack quiz file")).await?;
+            return Err(e);
+        }
+    };
     msg.edit(*ctx, |e| {
         e.embed(|e| {
             e.title("Quiz").description(format!(
