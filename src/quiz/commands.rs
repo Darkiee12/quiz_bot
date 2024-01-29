@@ -108,6 +108,7 @@ async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
     while let Some(mci) = &resp.next().await {
         if mci.data.custom_id.as_str() == "start" {
             mci.defer(&ctx.http()).await?;
+            break;
         }
     }
     loop {
