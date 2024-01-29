@@ -7,7 +7,7 @@ use tracing::{error, info, instrument, trace};
 use tracing_subscriber::{filter, prelude::*};
 mod quiz;
 mod utils;
-pub struct Data {} 
+pub struct Data {}
 pub type Error = Box<dyn std::error::Error + Send + Sync>;
 pub type Context<'a> = poise::Context<'a, Data, Error>;
 

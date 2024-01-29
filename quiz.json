@@ -647,7 +647,7 @@
       },
       {
         "content": "Link State Routing Algorithm",
-        "value": true
+        "value": false
       },
       {
         "content": "Border Gateway Protocol (BGP)",
@@ -1535,6 +1535,50 @@
       },
       {
         "content": "Border Gateway Protocol (BGP)",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is NOT a function of the control plane?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Network device configuration",
+        "value": false
+      },
+      {
+        "content": "Routing table updates",
+        "value": false
+      },
+      {
+        "content": "Data packet forwarding (true)",
+        "value": true
+      },
+      {
+        "content": "Network monitoring and management",
+        "value": false
+      }
+    ]
+  },
+  {
+    "question": "What is the impact of control plane failures on a computer network?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "Data packet forwarding is disrupted",
+        "value": true
+      },
+      {
+        "content": "Network security is compromised",
+        "value": false
+      },
+      {
+        "content": "Network performance is degraded",
+        "value": false
+      },
+      {
+        "content": "Network connectivity is lost",
         "value": false
       }
     ]

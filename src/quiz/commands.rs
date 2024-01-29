@@ -59,12 +59,12 @@ pub async fn quiz(ctx: Context<'_>) -> Result<(), Error> {
 }
 
 async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
-    let questions = match unpack_quiz(){
+    let questions = match unpack_quiz() {
         Ok(questions) => questions,
         Err(e) => {
             info!("Error: {}", e);
-            msg.edit(*ctx,|s|
-                s.content("Error: Failed to unpack quiz file")).await?;
+            msg.edit(*ctx, |s| s.content("Error: Failed to unpack quiz file"))
+                .await?;
             return Err(e);
         }
     };
@@ -104,7 +104,7 @@ async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
         .author_id(ctx.author().id)
         .timeout(std::time::Duration::from_secs(TIMEOUT))
         .build();
-    
+
     while let Some(mci) = &resp.next().await {
         if mci.data.custom_id.as_str() == "start" {
             mci.defer(&ctx.http()).await?;

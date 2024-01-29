@@ -16,13 +16,13 @@ pub fn unpack_quiz() -> Result<Vec<Question>, Error> {
     //         serde_json::from_str(json()).unwrap()
     //     }
     // };
-    let mut quiz: Vec<Question> =  serde_json::from_str(json()).unwrap();
+    let mut quiz: Vec<Question> = serde_json::from_str(json()).unwrap();
     let mut rng = rand::thread_rng();
     quiz.shuffle(&mut rng);
     Ok(quiz)
 }
 
-fn json() -> &'static str{
+fn json() -> &'static str {
     r#"
     [
   {
