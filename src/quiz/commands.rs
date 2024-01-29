@@ -64,7 +64,7 @@ async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
         e.embed(|e| {
             e.title("Quiz").description(format!(
                 r#"
-                There are a total of {}
+                There are a total of {} questions in the quiz.
                 Every question has 4 or 5 choices.
                 Please select the most suitable one
                 For each correct question, you will get 1 point
@@ -114,7 +114,6 @@ async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
             match mci.data.custom_id.as_str() {
                 "0" | "1" | "2" | "3" | "4" => {
                     mci.defer(ctx.http()).await?;
-                    info!("{} selected an option", mci.user.name);
                     let option = &game.get_content().choices
                         [mci.data.custom_id.parse::<usize>().unwrap_or(0)];
                     if option.value {
