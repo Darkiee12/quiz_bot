@@ -96,7 +96,8 @@ async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
         .author_id(ctx.author().id)
         .timeout(std::time::Duration::from_secs(TIMEOUT))
         .build();
-    if let Some(mci) = &resp.next().await {
+    
+    while let Some(mci) = &resp.next().await {
         if mci.data.custom_id.as_str() == "start" {
             mci.defer(&ctx.http()).await?;
         }
