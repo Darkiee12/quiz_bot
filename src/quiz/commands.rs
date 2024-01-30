@@ -71,15 +71,14 @@ async fn solo(ctx: &Context<'_>, msg: &ReplyHandle<'_>) -> Result<(), Error> {
     msg.edit(*ctx, |e| {
         e.embed(|e| {
             e.title("Quiz").description(format!(
-                r#"
-                There are a total of {} questions in the quiz.
-                Every question has 4 or 5 choices.
-                Please select the most suitable one
-                For each correct question, you will get 1 point
-                If you don't know the answer, please choose a random option to continue to the next question
-                Press the button below to start the quiz
-                "#, questions.len())
-            )
+                r#"There are a total of {} questions in the quiz.
+Every question has 4 or 5 choices.
+Please select the most suitable one.
+For each correct question, you will get 1 point.
+If you don't know the answer, please choose a random option to continue to the next question
+Press the button below to start the quiz."#,
+                questions.len()
+            ))
         })
         .components(|c| {
             c.create_action_row(|a| {

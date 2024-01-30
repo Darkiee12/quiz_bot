@@ -97,11 +97,11 @@
       },
       {
         "content": "Border Gateway Protocol (BGP)",
-        "value": true
+        "value": false
       },
       {
         "content": "Simple Network Management Protocol (SNMP)",
-        "value": false
+        "value": true
       },
       {
         "content": "Transmission Control Protocol (TCP)",
@@ -409,11 +409,11 @@
       },
       {
         "content": "It enforces security policies and access control.",
-        "value": true
+        "value": false
       },
       {
         "content": "It focuses on the efficient forwarding of packets.",
-        "value": false
+        "value": true
       }
     ]
   },
@@ -1582,5 +1582,49 @@
         "value": false
       }
     ]
-  }
+  },
+  {
+    "question": "How does IPv6 handle the issue of Network Address Translation (NAT) in IPv4?",
+    "kind": "choices",
+    "choices": [
+      {
+        "content": "It uses a similar NAT mechanism as IPv4",
+        "value": false
+      },
+      {
+        "content": "It does not address the issue of NAT",
+        "value": false
+      },
+      {
+        "content": "It restricts the use of NAT in IPv6 networks",
+        "value": false
+      },
+      {
+        "content": "It eliminates the need for NAT by providing a large address space (true)",
+        "value": true
+      }
+    ]
+  },
+  {
+    "question": "Which of the following is a characteristic of the link state routing algorithm?",
+    "kind": "choices",
+    "choices": [
+        {
+            "content": "It converges quickly in large networks (true)",
+            "value": true
+        },
+        {
+            "content": "It does not require periodic updates",
+            "value": false
+        },
+        {
+            "content": "It is less resource-intensive compared to distance vector routing",
+            "value": false
+        },
+        {
+            "content": "It is more suitable for small networks",
+            "value": false
+        }
+    ]
+}
 ]

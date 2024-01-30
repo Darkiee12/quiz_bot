@@ -133,9 +133,11 @@ async fn on_error(error: FrameworkError<'_, Data, Error>) {
         }
         FrameworkError::Command { error, ctx } => {
             error!(
-                "Error executing command {} in guild: {}: {:?}",
+                "Error executing command {} in : {}: {:?}",
                 ctx.command().qualified_name,
-                ctx.guild().unwrap().name,
+                ctx.guild()
+                    .map(|g| format!("Server {}", g.name))
+                    .unwrap_or_else(|| "Direct Message".to_string()),
                 error
             );
         }
